@@ -1,5 +1,5 @@
 const express = require("express")
-const favModel = require("../Model/fav.model")
+const favModel = require("../model/fav.model")
 const router = express.Router()
 
 
