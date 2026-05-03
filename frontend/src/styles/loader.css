@@ -1,0 +1,19 @@
+#loader {
+    height: 50px;
+    aspect-ratio: 1;
+    border-radius: 50vh;
+    border: 5px solid rgba(51, 51, 51, 0.5);
+    border-top-color: #333;
+    align-self: center;
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,131 @@
+.addToast,
+.removeToast {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.6s ease-out forwards,
+               slideOut 0.6s ease-in forwards 5.7s;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+    
+}
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-120%);
+    }
+}
+
+.addToast::after,
+.removeToast::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    animation: progress 5s linear forwards;
+    animation-delay: 0.6s;
+}
+
+.addToast::after{
+    background-color: #00e54c;
+}
+.removeToast::after{
+    background-color: #acacac;
+}
+
+@keyframes progress {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+.addToast i{
+    font-size: 30px;
+    color: #00e54c;
+}
+
+.removeToast i{
+    font-size: 30px;
+    color: #acacac;
+}
+
+.addToast h2,
+.removeToast h2 {
+    font-size: 18px;
+}
+
+.addToast p,
+.removeToast p {
+    font-size: 16px;
+}
+
+@media (max-width: 500px) {
+    .addToast,
+    .removeToast {
+        width: fit-content;
+        left: 5%;
+        padding: 15px;
+    }
+
+    .addToast i,
+    .removeToast i {
+        font-size: 25px;
+    }
+
+    .addToast h2,
+    .removeToast h2 {
+        font-size: 16px;
+    }
+
+    .addToast p,
+    .removeToast p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .addToast,
+    .removeToast {
+        left: 2%;
+        padding: 10px;
+    }
+
+    .addToast i,
+    .removeToast i {
+        font-size: 20px;
+    }
+
+    .addToast h2,
+    .removeToast h2 {
+        font-size: 14px;
+    }
+
+    .addToast p,
+    .removeToast p {
+        font-size: 12px;
+    }
+}
