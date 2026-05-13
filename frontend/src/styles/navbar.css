@@ -57,6 +57,10 @@ nav li:hover::after{
     width: 100%;
 }
 
+nav li:has(> a.active)::after {
+    width: 100%;
+}
+
 nav a{
     text-decoration: none;
     color: inherit;

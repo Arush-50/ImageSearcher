@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import '../styles/navbar.css'
 
 const Navbar = () => {
@@ -6,8 +6,8 @@ const Navbar = () => {
     <nav>
       <h1>ImageSearcher</h1>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/favourites">Favourites</Link></li>
+        <li><NavLink to="/" className={(e)=>{return e.isActive?"active":""}}>Home</NavLink></li>
+        <li><NavLink to="/favourites" className={(e)=>{return e.isActive?"active":""}}>Favourites</NavLink></li>
       </ul>
     </nav>
   )
